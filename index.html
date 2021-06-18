@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Movie Port</title>
+
+    <!-------------------- CSS only---------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="stilo.css" />
+  </head>
+
+  <body onload="tvPopular() + exibeFilmes()">
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <img src="imagin/logo.png" class="logo" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li><a href="#lançamento" class="categories">Lançamento</a></li>
+              <li><a href="#destaque"> Em destaque</a></li>
+              <li><a href="#avaliacao"> Avaliações</a></li>
+              <li><a href="#makingof"> Entrevista & Makingof</a></li>
+              <li><a href="#Novidades"> Novidades</a></li>
+            </ul>
+            <div class="d-flex">
+              <input
+                class="form-control me-2"
+                type="text"
+                id="query"
+                placeholder="pesquisa de filmes e Series"
+              />
+              <button class="btn btn-outline-success" id="search">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="container-fluid">
+        <div id="info"></div>
+
+        <p>Lançamentos</p>
+        <!--------------------
+                  
+                    Carroseul 
+                  
+             ---------------------->
+        <div class="row" id="lançamento">
+          <div class="row-col flex-column flex-sm-row">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="container overflow-hidden">
+                    <div class="row gx-5">
+                      <div class="col video">
+                        <embed src="https://www.youtube.com/embed/jpZrVxvG3mk""
+                        allowfullscreen=" true" width="425" height="344">
+                      </div>
+                      <div class="col item1">
+                        <div class="nomefilme">Disney’s Cruella</div>
+                        <div class="sinopse">
+                          <h1>
+                            Sinopse:
+                            <a
+                              >criativa e determinada, Estella quer fazer um
+                              nome para si através de seus designs e acaba
+                              chamando a atenção da Baronesa Von Hellman.
+                              Entretanto, o relacionamento delas desencadeia um
+                              curso de eventos e revelações que fazem com que
+                              Estella abrace seu lado rebelde e se torne a
+                              Cruella, uma pessoa má, elegante e voltada para a
+                              vingança.</a
+                            >
+                          </h1>
+                          <h1>Diretor: <a> Craig Gillespie </a></h1>
+                          <h1>
+                            Roteiro:
+                            <a
+                              >Tony McNamara, Aline Brosh McKenna, Kelly Marcel,
+                              Dana Fox, Steve Zissis</a
+                            >
+                          </h1>
+                          <h1>Estreia: <a>27 de maio de 2021 (Brasil)</a></h1>
+                          <h1>
+                            Elenco:
+                            <a>Emma Stone |</a>
+                            <a>Emma Thompson | </a>
+                            <a>Emily Beecham | </a>
+                            <a>Paul Walter Hauser </a>
+                          </h1>
+                          <h1>
+                            Avaliação:
+                            <h2>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </h2>
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="container overflow-hidden">
+                    <div class="row gx-5">
+                      <div class="col video">
+                        <embed
+                          src="https://www.youtube.com/embed/fbS0efVvkVU"
+                          allowfullscreen="true"
+                          width="425"
+                          height="344"
+                        />
+                      </div>
+                      <div class="col item1">
+                        <div class="nomefilme">The Batman</div>
+                        <div class="sinopse">
+                          <h1>
+                            Sinopse:
+                            <a>
+                              Ser fã de quadrinhos e acompanhar filmes de heróis
+                              não é tarefa fácil. Principalmente se o assunto
+                              for um certo Homem Morcego.De Ben Affleck até
+                              Robert Pattinson, foi uma longa jornada até compor
+                              a situação atual de The Batman, que começa a
+                              ganhar forma na Warner. Com uma bela dança das
+                              cadeiras do elenco e rumores sobre a narrativa
+                              saindo para todo lado, só sendo sagaz como Bruce
+                              Wayne para assimilar tudo</a
+                            >
+                          </h1>
+                          <h1>Diretor: <a> Matt Reeves </a></h1>
+                          <h1>
+                            Roteiro:
+                            <a
+                              >Matt Reeves, Peter Craig, Mattson Tomlin, Bill
+                              Finger</a
+                            >
+                          </h1>
+                          <h1>Estreia: <a>4 de março de 2022 (EUA)</a></h1>
+                          <h1>
+                            Elenco:
+                            <a>Robert Pattinson |</a>
+                            <a>Zoë Kravitz | </a>
+                            <a>Colin Farrell | </a>
+                            <a>Andy Serkis </a>
+                          </h1>
+                          <h1>
+                            Avaliação:
+                            <h2>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </h2>
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="container overflow-hidden">
+                    <div class="row gx-5">
+                      <div class="col video">
+                        <embed
+                          src="https://www.youtube.com/embed/H83kjG5RCT8"
+                          allowfullscreen="true"
+                          width="425"
+                          height="344"
+                        />
+                      </div>
+                      <div class="col item1">
+                        <div class="nomefilme">Army of the dead 2</div>
+                        <div class="sinopse">
+                          <h1>
+                            Sinopse:
+                            <a>
+                              Na trama, apesar de invadida por zumbis e fechada
+                              por tempo indeterminado, Las Vegas ainda segue
+                              repleta de dinheiro, e por isso um homem resolve
+                              organizar um grupo de mercenários para tentar o
+                              maior golpe já visto, realizar um assalto no meio
+                              de uma cidade de mortos-vivos.</a
+                            >
+                          </h1>
+                          <h1>Diretor: <a> Zack Snyder </a></h1>
+                          <h1>
+                            Roteiro:
+                            <a>Zack Snyder, Joby Harold, Shay Hatten</a>
+                          </h1>
+                          <h1>Estreia: <a> 14 de maio de 2021 (EUA)</a></h1>
+                          <h1>
+                            Elenco:
+                            <a>Huma Qureshi |</a>
+                            <a>Dave Bautista| </a>
+                            <a>Ella Purnell | </a>
+                            <a>Tig Notaro </a>
+                          </h1>
+                          <h1>
+                            Avaliação:
+                            <h2>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </h2>
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--------------------
+            
+              filme em destaque
+            
+            ---------------------->
+
+      <section id="destaque" class="my-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 title">
+              <div class="d-flex justify-content-between mb-4">
+                <h2>filme em destaque</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4" id="imagem_destaque"></div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="d-flex justify-content-end">
+                <button
+                  class="btn btn-secondary me-md-2"
+                  type="button"
+                  onclick="carregarFilmes()"
+                >
+                  + Carregar mais filmes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------
+            
+             Série em destaque
+            
+            ---------------------->
+
+      <section id="destaque" class="my-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 title">
+              <div class="d-flex justify-content-between mb-4">
+                <h2>Séries em destaque</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4" id="serie_destaque"></div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="d-flex justify-content-end">
+                <button
+                  class="btn btn-secondary me-md-2"
+                  type="button"
+                  onclick="carregarSerie()"
+                >
+                  + Carregar mais filmes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------
+                  
+                   avaliação
+                  
+            ---------------------->
+      <div>
+        <section id="avaliacao" class="mb-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 mb-4">
+                <h3>Últimas avaliações</h3>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-lg-4 mb-5">
+                <div class="d-flex">
+                  <imagem>
+                    <img src="imagin/brad.jpg" />
+                  </imagem>
+                  <div class="content flex-grow-1">
+                    <h4 class="card-title">Brad Pitt</h4>
+                    <a
+                      >Esse é aquele tipo de filme que te deixa pensando nele o
+                      dia todo,realmente muito bom.</a
+                    >
+
+                    <h2>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                      <i>06/06/2021</i>
+                    </h2>
+                  </div>
+                </div>
+                <a href="javascript:;" class="avatar avatar-sm rounded-circle">
+                </a>
+              </div>
+              <div class="col-lg-4 mb-5">
+                <div class="d-flex">
+                  <imagem>
+                    <img src="imagin/dog.jpg" />
+                  </imagem>
+                  <div class="content flex-grow-1">
+                    <h4 class="card-title">Ronaldo Dogg</h4>
+                    <a
+                      >Depois de passar por uns 10 , acabei ficando nesse!Podem
+                      Assistir que Valerá à Pena!!!!!</a
+                    >
+                    <h2>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                      <i>08/05/2021</i>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-5">
+                <div class="d-flex">
+                  <imagem>
+                    <img src="imagin/ines.jpg" />
+                  </imagem>
+                  <div class="content flex-grow-1">
+                    <h4 class="card-title">Inês Brasil</h4>
+                    <a
+                      >O grito da panterona quando vir Scarlett Johansson
+                      Uaaaaaaaarwwwww</a
+                    >
+                    <h2>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                      <i>05/03/2021</i>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="d-flex justify-content-end">
+                  <button class="btn btn-secondary me-md-2" type="button">
+                    + Carregar mais comentários
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!--------------------
+                    
+                   Makingof
+                    
+---------------------->
+
+      <div class="container-fluid" id="makingof">
+        <h3>Entrevistas & Making of</h3>
+        <div class="row flex-column flex-sm-row">
+          <div class="col-sm">
+            <div class="col video">
+              <embed src="https://www.youtube.com/embed/e1O7DLuG5P4""
+              allowfullscreen=" true" width="100%" height="100%">
+              <h1>Filme:<a> O auto da compadecida</a></h1>
+              <p>Diretor:<a> Guel Arraes</a></p>
+              <p></p>
+              <p>Roteiro:<a> João Falcão, Adriana Falcão</a></p>
+              <p>Estreia:<a> 10/09/2000</a></p>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="col video">
+              <embed
+                src="https://www.youtube.com/embed/0HEvyxNJRks"
+                allowfullscreen="
+                                    true"
+                width="100%"
+                height="100%"
+              />
+              <h1>Filme:<a> Aquaman</a></h1>
+              <p>Diretor:<a> James Wan</a></p>
+              <p></p>
+              <p>Roteiro:<a> David Leslie Johnson, Will Beall</a></p>
+              <p>Estreia:<a> 13/12/2018</a></p>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="col video">
+              <embed
+                src="https://www.youtube.com/embed/SuHRyxgUs04"
+                allowfullscreen="
+                                    true"
+                width="100%"
+                height="100%"
+              />
+              <h1>Filme:<a> Piratas do Caribe: A Vingança de Salazar</a></h1>
+              <p>Diretor:<a> Joachim Rønning, Espen Sandberg</a></p>
+              <p></p>
+              <p>Roteiro:<a>Jeff Nathanson</a></p>
+              <p>Estreia:<a> 25/05/2017</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="expansão">
+          <button type="button" class="btn btn-dark">
+            + Carregar mais filmes
+          </button>
+        </div>
+      </div>
+
+      <!--------------------
+                    
+                   Novidades
+                    
+---------------------->
+      >
+      <div class="container-fluid" id="Novidades">
+        <div class="novidades">
+          <h3>Novidades</h3>
+          <div class="row border-bottom pb-2 mb-4 blocos">
+            <div class="col-md-4">
+              <img src="imagin/img11.jpg" width="100%" />
+            </div>
+
+            <div class="col-md-8">
+              <h1 class="card-title">
+                Homem-Aranha 3: Alfred Molina fala sobre o seu retorno à
+                franquia
+              </h1>
+              <p class="card-text">
+                Durante as conversas, Molina perguntou a Jon Watts, o diretor de
+                No Way Home, como seria possível ter o Octopus de volta, já que
+                ele morre no final de Homem-Aranha 2. Molina comentou que o
+                diretor lhe respondeu apenas: “Neste universo, ninguém realmente
+                morre”.
+              </p>
+              <span class="badge rounded-pill bg-dark">Hollywood</span>
+              <span class="badge rounded-pill bg-dark">Marvel</span>
+              <span class="badge rounded-pill bg-dark">Novidades</span>
+            </div>
+          </div>
+
+          <div class="row border-bottom pb-2 mb-4 blocos">
+            <div class="col-md-4">
+              <img src="imagin/img12.jpg" />
+            </div>
+
+            <div class="col-md-8">
+              <h1 class="card-title">
+                The Flash: filme da DC inicia as filmagens e ganha novo logo
+              </h1>
+              <p class="card-text">
+                As gravações do filme The Flash começaram nesta segunda-feira
+                (19), momento em que também foi revelado o novo logo oficial do
+                velocista da DC. A confirmação do início da produção foi
+                compartilhada pela Warner Bros. e pelo diretor Andy Muschietti
+                (It: A Coisa) em suas redes sociais.
+              </p>
+              <span class="badge rounded-pill bg-dark">Hollywood</span>
+              <span class="badge rounded-pill bg-dark">DC</span>
+              <span class="badge rounded-pill bg-dark">Produção</span>
+            </div>
+          </div>
+
+          <div class="row border-bottom pb-2 mb-4 blocos blocos">
+            <div class="col-md-4">
+              <img src="imagin/img13.jpg" width=" 100% " />
+            </div>
+
+            <div class="col-md-8">
+              <h1 class="card-title">
+                Vin Diesel estrelará filme live-action sobre brinquedos de luta
+              </h1>
+              <p class="card-text">
+                Vin Diesel estrelará a adaptação live-action de Rock ‘Em Sock
+                ‘Em Robots, clássico brinquedo de luta composto por dois
+                boxeadores em uma plataforma que simula ringue. O projeto,
+                descrito como uma aventura de ação, será desenvolvido pela
+                produtora do ator — One Race Films — em parceria com a Universal
+                e Mattel Films.
+              </p>
+              <span class="badge rounded-pill bg-dark">Hollywood</span>
+              <span class="badge rounded-pill bg-dark">Universal</span>
+              <span class="badge rounded-pill bg-dark">Produção</span>
+            </div>
+          </div>
+        </div>
+
+        <!--------------------
+                    
+                   Editorial
+                    
+---------------------->
+        <div class="col sobre">
+          <h3>Sobre</h3>
+          <p>
+            Este é um portal de filmes desenvolvido por Pedro Mozany, aluno do
+            curso de Sistemas de Informação PUC-MINAS para a disciplina de
+            Desenvolvimento de Interface Web. Esse projeto foi realizado para o
+            aplicar os ensinamento que obteve no curso testando as práticas e
+            conceitos em HTML,CSS,JS,. O site simula uma experiência real de um
+            acesso ao um blog de Filmes.
+          </p>
+        </div>
+        <div class="col editorial">
+          <h3>Editorial</h3>
+          <div>
+            <i class="bi bi-person"></i>
+            <a>Redação: </a>
+            Pedro Mozany
+          </div>
+          <div>
+            <i class="bi bi-person"></i>
+            <a>Pesquisa: </a>
+            Pedro Mozany
+          </div>
+          <div>
+            <i class="bi bi-person"></i>
+            <a>Gerente Geral: </a>
+            Pedro Mozany
+          </div>
+        </div>
+        <div class="col redes">
+          <h2>Redes Sociais</h2>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-twitter"></i>
+        </div>
+      </div>
+    </main>
+
+    <!--------------------
+                    
+                    Rodapé
+                    
+---------------------->
+    <footer>
+      <div class="row">
+        <div class="col-12 footer_area">
+          <div class="row">
+            <div class="col-10 text_rotape">
+              Copyright 2020 - Disciplina de Desenvolvemnto de Interface Web -
+              ICE PUC MINAS
+            </div>
+            <div class="col-2 img_rotape">
+              <img src="imagin/logo.png" class="logo" width="100%" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

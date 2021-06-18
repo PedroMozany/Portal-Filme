@@ -1,0 +1,464 @@
+html{
+    width: 100%;
+}
+body {
+  background-image: url(imagin/img9.jpg);
+
+}
+
+/* inicio cabeçalho */
+
+header {
+  display: block;
+  align-content: center;
+  background-color: rgb(0, 0, 0);
+  margin: 20px;
+  text-align: center;
+
+}
+
+.navbar a {
+  color: white;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  margin: 20px;
+  
+
+}
+.logo {
+  width: 120px;
+}
+
+/* fim cabeçalho */
+
+/* inicio main */
+
+main {
+   
+   margin: 20px;
+  background-color: black;
+  margin-bottom: 20px;
+}
+
+.main h3 {
+  color: white;
+}
+.main p {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+}
+
+#info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-content: center;
+
+   }
+   #info .des{
+     color: black;
+     text-align: center;
+     font-size: 12px;
+
+   }
+   #info .card{
+    margin: 20px;
+     width: 280px;
+     color: black;
+     text-align: center;
+     font-size: 12px;
+   }
+
+/* fim main */
+
+/* inicio carroseul  */
+
+#lançamento {
+  background-color: teal;
+}
+
+.video {
+  padding: 20px;
+}
+
+.item1 {
+  padding: 20px;
+}
+
+.nomefilme {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.item1 a {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.item1 h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 13px;
+  color: white;
+  margin-top: 10px;
+  text-align: left;
+}
+.bi{
+    font-size: 15px;
+}
+.carousel-indicators [data-bs-target] {
+    background: #000;
+    width: 16px;
+    height: 16px;
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 16px;
+}
+
+/* fim  carroseul  */
+
+/*inicio do destaque*/
+#destaque{
+  color: white;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 700px) {
+  
+ .container{
+  width: 100%;
+}
+  .column {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+  }
+}
+/* Style the counter cards */
+ .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.card .profile{
+   border-radius:10px;
+   transition: 0.2s;
+   
+}
+ .card:hover .profile{
+  transform:scale(1.4);
+  border-top-right-radius:50px;
+  border-top-left-radius:50px;
+}
+
+ .card .content{
+  position:relative;
+  overflow:hidden;
+}
+ .card .content .back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color: #f1f1f1e6;
+  transition:1s;
+  z-index:1;
+  padding:10px;
+}
+
+.from-left{
+  top:0;
+  left:-100%;
+}
+.card:hover .content .from-left {
+   left:0%;
+}
+
+.from-bottom{
+  top:100%;
+  left:0;
+}
+.card:hover .content .from-bottom {
+   top:0%;
+}
+
+.from-right{
+  top:0%;
+  right:-100%;
+}
+.card:hover .content .from-right {
+   right:0;
+}
+
+.card .content .back h3{
+  color: #000;
+  font-size:15px;
+  letter-spacing:2px;
+}
+.card .content .back .tem-img{
+  border-radius:100%;
+}
+.card .content .back .des{
+  font-size:15px;
+ 
+}
+#imagem_destaque .des{
+  color: #000;
+  font-size: 11px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#serie_destaque .des{
+  color: #000;
+  font-size: 11px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/*fim do destaque*/
+
+/*inicio da Avalição */
+
+#avaliacao {
+  margin-top: 10px;
+  color: white;
+  
+}
+#avaliacao img {
+   margin: 0 20px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+
+#avaliacao h4{
+    color: white;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#avaliacao h2{
+    font-size: 15px;
+}
+
+
+/*fim da Avalição */
+
+/*inicio do makingof*/
+
+#makingof {
+  background-color: teal;
+  display: block;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+#makingof h1 {
+  font-size: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: left;
+  color: black;
+  margin-top: 10px;
+}
+
+#makingof h3 {
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#makingof h1 a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+#makingof p {
+  font-size: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: left;
+  color: black;
+  margin: 0cm;
+}
+
+#makingof p a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+/*fim do makingof*/
+
+/* Novidades/editorial inicio grid */
+
+#Novidades {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat (2, 100px);
+  margin: 20px auto;
+  padding: 20px;
+  color: white;
+}
+
+.novidades h2 {
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+}
+
+.card-title {
+  color: black;
+  font-size: 15px;
+}
+
+.novidades p {
+  color: black;
+  font-size: 12px;
+  text-align: left;
+}
+
+.novidades img {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+.sobre p {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  position: initial;
+}
+
+.blocos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+  background-color: teal;
+}
+
+.novidades {
+  grid-column: 1/9;
+  grid-row: 1/5;
+}
+
+.editorial div {
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+.editorial a {
+  font-size: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.sobre {
+  grid-column: 9/12;
+  grid-row: 1;
+}
+
+.editorial {
+  grid-column: 9/12;
+  grid-row: 3;
+}
+
+.redes {
+  grid-column: 9/12;
+  grid-row: 4;
+}
+
+.redes h2 {
+  font-size: 20px;
+}
+
+/*  Novidades/editorial fim grid*/
+
+/*inicio rotapé*/
+
+footer {
+
+  background-color: rgb(0, 0, 0);
+  color: white;
+ margin: 20px;
+}
+
+.footer_area div{
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+}
+#info div {
+  float: left;
+  
+}
+
+/* fim rotapé */
+
+/* Breakpoint: 600 */
+
+@media screen and (max-width: 600px) {
+  #Novidades {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .novidades .blocos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+#info{
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+    align-content: center;
+ 
+}
+}
+
+
+/* Breakpoint: 1024 */
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+  #Novidades {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .novidades .blocos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  #info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+  }
+  
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+ 
+  #Novidades {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .novidades .blocos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+ 
+}
